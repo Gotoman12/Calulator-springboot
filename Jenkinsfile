@@ -1,6 +1,10 @@
 pipeline{
     agent any
 
+    tools{
+        jdk 'java-17'
+        maven 'maven'
+    }
     stages{
         stage('git-chechout'){
             steps{
