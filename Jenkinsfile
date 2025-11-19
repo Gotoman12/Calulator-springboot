@@ -20,5 +20,10 @@ pipeline{
                 sh "mvn clean package"
             }
         }
+        stage("host the application"){
+            steps{
+                sh "java -jar target/calculator-app-0.0.1-SNAPSHOT.jar"
+            }
+        }
     }
 }
