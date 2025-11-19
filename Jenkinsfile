@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    tools{
+       jdk "java-17"
+       maven "maven"
+    }
     stages{
         stage("GIT-CHECKOUT"){
             steps{
