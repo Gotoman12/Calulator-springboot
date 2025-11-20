@@ -28,10 +28,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            // Optional: clean up workspace, notify, etc.
-            cleanWs()
-        }
-    }
 }
