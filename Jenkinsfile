@@ -21,7 +21,7 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
-        stage('Host the Application') {
+        stage('Host the Application in ec2') {
             steps {
                 // This runs the app in the foreground—use with caution!
                 sh 'nohup java -jar target/calculator-app-0.0.1-SNAPSHOT.jar &'
